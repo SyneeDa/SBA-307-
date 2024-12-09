@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="app.js" defer></script>
+  <style>
+    table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li style="float: left;" id="sidebar-btn"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a class="active" href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li style="float: right;"id="menu-btn"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+  <aside id="sidebar" class="sidebar"> 
+    <h2>Synee' Davenport</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+    width="100px">
+    <p style="margin: 10px;">Masters of Science in Information Systems Graduate</p>
+    <a href="Synee_Resume1.pdf" download="Synee_Resume1.pdf">
+      <button class="resume-btn">Download My Resume</button>
+    </a>
+  </aside>
+  <main class="main">
+    <h2>SQL Project</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam doloribus dolor culpa temporibus aliquam suscipit debitis mollitia totam iste, ratione ipsam esse quia provident ea deserunt quam sunt ut nihil!</p><br>
+    <h3>Normalized Database Tables</h3>
+    <table>
+      <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Job Title</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>1</td>
+          <td>Name One</td>
+          <td>email1@example.com</td>
+          <td>department1</td> 
+          <td>Job 1</td>
+      </tr>
+      <tr>
+          <td>2</td>
+          <td>Name Two</td>
+          <td>email2@example.com</td>
+          <td>department2</td> 
+          <td>Job 2</td>
+      </tr>
+    </table>
+  </main>
+</body>
+</html>

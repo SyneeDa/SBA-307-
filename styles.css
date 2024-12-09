@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-bg-color: #FFFFFF;
+  --primary-text-color: #1D3557;
+  --accent-color: #457B9D;
+  --secondary-accent-color: #A8DADC;
+  --highlight-color: #F1FAEE;
+  --button-bg-color: #1D3557;
+  --button-hover-bg-color: #457B9D;
+  --link-color: #1D3557;
+  --border-color: #A8DADC;
+  --subtle-bg-color: #F1FAEE;
+  --footer-bg-color: #457B9D;
+  --footer-text-color: #FFFFFF;
+}
+body{
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 60px 1fr;
+  grid-template-areas: 
+  "nav nav"
+  "side main";
+  height: 100vh;
+}
+.sidebar{
+  height: calc(100vh - 60px);
+  top: 60px;
+  position: sticky;
+  align-self: start;
+  background-color: var(--primary-bg-color);
+  grid-area: side;
+  text-align: center;
+  transition: transform 0.3s ease, display 0s 0.3s;
+}
+.sidebar.hidden {
+  transform: translateX(-100%);
+  display: none;
+}
+body.sidebar-hidden {
+  grid-template-columns: 0 1fr;
+}
+/*.sidebar ul{
+  list-style-type: none;
+}*/
+/*.sidebar .arrow{
+  fill: var(--accent-color);
+}
+.sidebar .arrow:hover{
+  fill: var(--highlight-color);
+  background-color: var(--accent-color);
+  border-radius: 3px;
+}*/
+.navbar{
+  top: 0;
+  position: sticky;
+  background-color: var(--primary-bg-color);
+  grid-area: nav;
+  padding: 1em;
+}
+#menu-btn{
+  display: none;
+}
+#menu-btn a:hover,
+#menu-btn a.active {
+  background: var(--border-color);
+  color: inherit;  
+}
+#sidebar-btn a:hover,
+#sidebar-btn a.active {
+  background: var(--border-color);
+  color: inherit; 
+}
+#sidebar-btn{
+  transition: transform 0.3s ease;
+}
+.rotated {
+  transform: rotate(180deg);
+}
+/*.sidebar-btn:hover, .menu-btn:hover{
+  fill: var(--highlight-color);
+  background: var(--accent-color);
+  transition: .5s;
+}*/
+/*.check-btn .menu{
+  fill: var(--accent-color);
+  border-radius: 3px;
+  cursor: pointer;
+  display: block;
+}
+
+.check-btn .menu:hover{
+  fill: var(--highlight-color);
+  background: var(--accent-color);
+  transition: .5s;
+}*/
+.navbar ul{
+  float: right;
+}
+.navbar ul li{
+  display: inline;
+  line-height: 2px;
+}
+.navbar ul li a{
+  color: var(--link-color);
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+}
+.navbar ul li a:focus {
+  background: var(--highlight-color);
+  color: var(--accent-color);
+}
+a.active, a:hover{
+  background: var(--highlight-color);
+  color: var(--accent-color);
+  transition: .5s;
+}
+.main{
+  background-color: var(--primary-bg-color);
+  grid-area: main;
+  padding: 50px;
+
+  /*display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+  "c1 c2"
+  "c3 c4";
+  gap: 20px;*/
+}
+.sidebar img{
+  border-radius: 50px;
+}
+.sidebar .resume-btn{
+  border: none;
+  border-radius: 3px;
+  padding: 10px;
+  color: var(--secondary-accent-color);
+  background-color: var(--button-bg-color);
+}
+.resume-btn:hover{
+  background-color: var(--button-hover-bg-color);
+}
+/*.card{
+  background-color: var(--border-color);
+}
+.card:nth-child(1){
+  grid-area: c1;
+}
+.card:nth-child(2){
+  grid-area: c2;
+}*/
+@media (max-width: 750px) {
+  body {
+    grid-template-columns: 1fr; 
+    grid-template-areas: 
+      "nav"
+      "side"
+      "main";  
+  }
+  .sidebar {
+    width: 100%; 
+    transform: translateX(0); 
+    position: relative;
+    height: auto;  
+  }
+  .main {
+    padding: 20px;
+  }
+  body.sidebar-hidden {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "nav"
+      "main"; 
+  }
+  .navbar ul {
+    float: none;
+    text-align: center;
+    padding: 10px;
+  }
+  .navbar ul li {
+    display: inline-block;
+    margin: 5px;
+  }
+  .navbar ul li a {
+    padding: 8px;
+    font-size: 14px;
+  }
+  #sidebar-btn {
+    display: inline-block;  
+    padding: 10px;
+  }
+  #sidebar-btn a svg {
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="text/javascript" src="app.js" defer></script>
+  <style>
+ 
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li style="float: left;" id="sidebar-btn"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M440-240 200-480l240-240 56 56-183 184 183 184-56 56Zm264 0L464-480l240-240 56 56-183 184 183 184-56 56Z"/></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About me</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a class="active" href="contact.html">Contact</a></li>
+      <li style="float: right;"id="menu-btn"><a><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+  </nav>
+  <aside id="sidebar" class="sidebar"> 
+    <h2>Synee' Davenport</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+    width="100px">
+    <p style="margin: 10px;">Masters of Science in Information Systems Graduate</p>
+    <a href="Synee_Resume1.pdf" download="Synee_Resume1.pdf">
+      <button class="resume-btn">Download My Resume</button>
+    </a>
+  </aside>
+  <main class="main">
+    <h2>Contact Me</h2>
+    <form action="/submit_form" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+    <form action="submit_form" method="POST">
+      <label for="services">Choose a service:</label>
+      <select id="services" name="services">
+          <option value="web-design">Web Design</option>
+          <option value="graphic-design">Graphic Design</option>
+          <option value="cybersecurity">Cybersecurity</option>
+      </select>
+      <br><br>
+        
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+</body>
+</html>
